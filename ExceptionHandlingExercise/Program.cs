@@ -16,8 +16,6 @@ namespace ExceptionHandlingExercise
             // Below we will set this up.
             // ------------------------------------------------------------------------------
 
-
-
             //TODO START HERE:
 
             // 1) Create an char[], it must contain 6 numbers and 3 letters - name it arr
@@ -42,20 +40,23 @@ namespace ExceptionHandlingExercise
                     str = item.ToString();
                     var buttMonkey = int.Parse(str);
                     numbers.Add(buttMonkey);
+                    Console.WriteLine(str);
                 }
                 catch (Exception e)
+
                 // 10) Inside the catch block:
                 // 11) In the scope of your catch you can use the following code:                  
                 // Console.WriteLine($"Unable to Parse '{character}'"); //character will be the name of each item in your collection
                 {
-                    Console.WriteLine($"Unable to Parse '{item}'");
+                    Console.WriteLine($"" +
+                        $"Unable to Parse '{item}'");
                 }
 
                 // Uncomment the code below to see the numbers you successfully added to the numbers list: 
-/*                foreach (var num in numbers)
+                foreach (var num in numbers)
                 {
                     Console.WriteLine(num);
-                }*/
+                }
             }
         }
     }
